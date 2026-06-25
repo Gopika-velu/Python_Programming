@@ -1,13 +1,12 @@
-numbers = []
-for i in range(15):
-    value = int(input("Enter a number: "))
-    numbers.append(value)
-search = int(input("Enter the number to search: "))
-found = False
-for i in range(15):
-    if numbers[i] == search:
-        print("Number found at position", i + 1)
-        found = True
-        break
-if found == False:
-    print("Number not found")
+def linearSearch(arr, targetVal):
+  for i in range(len(arr)):
+    if arr[i] == targetVal:
+      return i
+  return -1
+mylist = [3, 7, 2, 9, 5, 1, 8, 4, 6]
+x = 4
+result = linearSearch(mylist, x)
+if result != -1:
+  print("Found at index", result)
+else:
+  print("Not found")
